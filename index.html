@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>App Store IPA Creator</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="app-shell">
+      <section class="panel form-panel">
+        <div class="panel-header">
+          <p class="eyebrow">App Store</p>
+          <h1>IPA Archive Setup</h1>
+        </div>
+
+        <form id="appForm" class="app-form">
+          <label>
+            <span>App Name</span>
+            <input type="text" id="appName" name="appName" placeholder="Paste here" />
+          </label>
+
+          <label>
+            <span>Bundle ID</span>
+            <input type="text" id="bundleId" name="bundleId" placeholder="Paste here" />
+          </label>
+
+          <label>
+            <span>Version</span>
+            <input type="text" id="version" name="version" placeholder="Paste here" />
+          </label>
+
+          <label>
+            <span>Platform</span>
+            <input type="text" id="platform" name="platform" placeholder="Paste here" />
+          </label>
+
+          <label>
+            <span>Minimum OS</span>
+            <input type="text" id="minimumOs" name="minimumOs" placeholder="Paste here" />
+          </label>
+
+          <label>
+            <span>IPA file</span>
+            <input type="text" id="ipaFile" name="ipaFile" placeholder="Paste here" />
+          </label>
+
+          <label>
+            <span>File Size</span>
+            <input type="text" id="fileSize" name="fileSize" placeholder="Paste here" />
+          </label>
+
+          <label>
+            <span>App Bundle Path</span>
+            <input type="text" id="appBundlePath" name="appBundlePath" placeholder="Paste here" />
+          </label>
+
+          <label>
+            <span>Archive Type</span>
+            <input type="text" id="archiveType" name="archiveType" placeholder="Paste here" />
+          </label>
+
+          <div class="form-actions">
+            <button type="button" id="createIpaBtn" class="primary-btn">Create IPA</button>
+          </div>
+        </form>
+      </section>
+
+      <aside class="panel preview-panel">
+        <div class="panel-header compact">
+          <p class="eyebrow">Live App Information Preview</p>
+        </div>
+
+        <div id="appPreview" class="app-preview" aria-live="polite">
+          <div class="preview-badge">Ready</div>
+          <h2 id="previewName">App Name</h2>
+          <ul>
+            <li><strong>Bundle ID:</strong> <span id="previewBundleId">Paste here</span></li>
+            <li><strong>Version:</strong> <span id="previewVersion">Paste here</span></li>
+            <li><strong>Platform:</strong> <span id="previewPlatform">Paste here</span></li>
+            <li><strong>Minimum OS:</strong> <span id="previewMinimumOs">Paste here</span></li>
+            <li><strong>IPA file:</strong> <span id="previewIpaFile">Paste here</span></li>
+            <li><strong>File Size:</strong> <span id="previewFileSize">Paste here</span></li>
+            <li><strong>App Bundle Path:</strong> <span id="previewAppBundlePath">Paste here</span></li>
+            <li><strong>Archive Type:</strong> <span id="previewArchiveType">Paste here</span></li>
+          </ul>
+        </div>
+
+        <button type="button" id="downloadIpaBtn" class="secondary-btn" disabled>
+          Download IPA
+        </button>
+        <p id="statusMessage" class="status-message" aria-live="polite"></p>
+      </aside>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
